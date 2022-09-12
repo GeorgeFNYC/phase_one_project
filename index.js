@@ -1,3 +1,4 @@
+//this will fetch the data and load it up
 fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=cbb53a38daad4a38723daab094adb724')
 .then ((res) => res.json())
 .then((movie) =>  {
@@ -18,27 +19,25 @@ image.addEventListener("click", () => {
     console.log("clicked movie")
     renderDetails(movie)
 
-// image.addEventListener("mouseover", () => {
+image.addEventListener("mouseover", () => {
 
-// })
- /////hellllooooooo
+})
 })
 }
 
+function renderDetails(movie) {
+//let displayInfoPanel = document.querySelector('#movieInfo');
+//let movieTitle = document.querySelector("#title")
+//movieTitle.textContent = movie.title
+//let language = document.querySelector("#language")
+language.innerText = movie.original_language
+let releaseDate = document.querySelector("#release_date")
+releaseDate.innerText =  movie.release_date
+let voteAverage = document.querySelector("#vote_average")
+voteAverage.innerText = movie.vote_average
+let description = document.querySelector("#overview")
+description.innerText = movie.overview
+console.log(movie.title)
 
-function mouseHighlight () {
-    
+//displayInfoPanel.append(releaseDate, title)
 }
-
-
-
-// function renderDetails(movie) {
-// let displayInfoPanel = document.querySelector('#movieInfo');
-// //let name = document.querySelector("#original_title");
-// //name.innerText = movie.original_title
-// let releaseDate = document.querySelector("#release_date")
-// let voteAverage = document.querySelector("#vote_average")
-// let description = document.querySelector("#overview")
-
-// }
-
