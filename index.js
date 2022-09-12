@@ -21,7 +21,7 @@ image.addEventListener("click", () => {
 // image.addEventListener("mouseover", () => {
 
 // })
-
+ /////hellllooooooo
 })
 }
 
